@@ -17,6 +17,10 @@ const TodoSchema = new mongoose.Schema({
       description: {
         type: String,
       },
+      status: {
+        type: String,
+        required: true,
+      },
     },
   ],
 

@@ -31,7 +31,7 @@ app.use("/todos", todosRouter);
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.b44wv.mongodb.net/TodoApp?retryWrites=true&w=majority`,
+    `mongodb://${process.env.DB_USER}:${process.env.DB_PW}@cluster0-shard-00-00.b44wv.mongodb.net:27017,cluster0-shard-00-01.b44wv.mongodb.net:27017,cluster0-shard-00-02.b44wv.mongodb.net:27017/TodoApp?ssl=true&replicaSet=atlas-qmroyf-shard-0&authSource=admin&retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
